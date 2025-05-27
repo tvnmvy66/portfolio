@@ -19,7 +19,7 @@ export default function Page() {
             Full Stack Developer | AI Enthusiast
           </p>
           <p className="text-base text-gray-600 dark:text-gray-400">
-            Hello! I'm Tanmay Dongare, a full-stack developer proficient in HTML, CSS, JavaScript, and React for frontend, and experienced in backend development using Node.js, Next.js, and Python (FastAPI). I work with databases such as MongoDB and PostgreSQL, and have a passion for GenAI, leveraging tools like QdrantDB (for vector storage) and Neo4j (for knowledge graphs) with frameworks such as LangChain, LangGraph, and Langfuse. I'm also comfortable with containerization and caching technologies like Docker, Redis, and Mem0.
+            Hello! I&apos;m Tanmay Dongare, a full-stack developer proficient in HTML, CSS, JavaScript, and React for frontend, and experienced in backend development using Node.js, Next.js, and Python (FastAPI). I work with databases such as MongoDB and PostgreSQL, and have a passion for GenAI, leveraging tools like QdrantDB (for vector storage) and Neo4j (for knowledge graphs) with frameworks such as LangChain, LangGraph, and Langfuse. I&apos;m also comfortable with containerization and caching technologies like Docker, Redis, and Mem0.
           </p>
         </motion.div>
         <motion.div
