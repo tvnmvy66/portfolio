@@ -61,7 +61,7 @@ const Navbar: React.FC = () => {
       </div>
 
       <Avatar className="h-12 w-12">
-          <AvatarImage src="https://github.com/shadcn.png" />
+          <AvatarImage src="https://github.com/tvnmvy66.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
     </nav>

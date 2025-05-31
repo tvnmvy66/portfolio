@@ -22,8 +22,8 @@ export default function RootLayout({
         blend={0.5}
         amplitude={1.0}
         speed={0.5}
-      />
-        <Navbar />
+        />
+        <Navbar/>
         {children}
       </body>
     </html>
