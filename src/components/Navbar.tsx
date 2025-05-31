@@ -1,18 +1,16 @@
 "use client";
 
 // components/Navbar.tsx
-
 import React from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { UserCircleIcon, MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/Avatar"
 import GooeyNav from '@/components/Menu'
 
 const Navbar: React.FC = () => {
   const pathname = usePathname(); // current path for active link
-
+  console.log(pathname);
   return (
     <nav className="absolute top-0  left-0 w-full px-6 border-none flex items-center justify-between bg-transparent border-b border-white/20 text-white">
       {/* Left: Logo */}

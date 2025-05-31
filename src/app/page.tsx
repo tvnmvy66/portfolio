@@ -5,11 +5,9 @@ import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/Card"
-import Aurora from '@/components/Aurora';
 
 export default function Page() {
   return (

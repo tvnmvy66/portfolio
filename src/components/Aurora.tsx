@@ -143,7 +143,7 @@ export default function Aurora(props: AuroraProps) {
     gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
     gl.canvas.style.backgroundColor = "transparent";
 
-    let program: Program | undefined;
+    let program: Program | null = null;
 
     function resize() {
       if (!ctn) return;
@@ -158,8 +158,8 @@ export default function Aurora(props: AuroraProps) {
 
     const geometry = new Triangle(gl);
     if (geometry.attributes.uv) {
-      // TypeScript may require a type assertion here.
-      delete (geometry.attributes as any).uv;
+      // Remove uv attribute as it's not needed
+      delete (geometry.attributes as Record<string, unknown>).uv;
     }
 
     const colorStopsArray = colorStops.map((hex) => {
@@ -178,7 +178,7 @@ export default function Aurora(props: AuroraProps) {
         uBlend: { value: blend },
       },
     });
-
+    
     const mesh = new Mesh(gl, { geometry, program });
     ctn.appendChild(gl.canvas);
 
@@ -210,7 +210,7 @@ export default function Aurora(props: AuroraProps) {
       }
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
-  }, [amplitude]);
+  }, [amplitude, blend, colorStops]);
 
   return <div ref={ctnDom} className="w-full h-full" />;
 }
