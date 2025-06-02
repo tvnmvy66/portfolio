@@ -10,12 +10,13 @@ import { motion } from 'framer-motion';
 // } from "@/components/Card"
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/Avatar'
 import { TypeAnimation } from 'react-type-animation';
+import Orb from '@/components/Orb'
 
 export default function Page() {
   return (
     <>
-    <div className="">
-      <main className="flex flex-col">
+    <div className="flex">
+      <main className="flex flex-col max-w-140">
         <div>
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -37,7 +38,7 @@ export default function Page() {
       <div className='w-150 pl-10 pt-10'>
         <img src="https://ghchart.rshah.org/tvnmvy66" alt="GitHub Contributions Chart"></img>
       </div>
-      <div className='w-150 pl-10 pt-10'>
+      <div className='w-150 pl-10 pt-10 '>
         <TypeAnimation
           style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
           sequence={[
@@ -49,6 +50,14 @@ export default function Page() {
         />
       </div>
       </main>
+      <div className='w-full h-[600px] p-0 m-0 relative'>
+          <Orb
+            hoverIntensity={0.5}
+            rotateOnHover={true}
+            hue={10}
+            forceHoverState={false}
+          />
+        </div>
     </div>
     </>
   );
