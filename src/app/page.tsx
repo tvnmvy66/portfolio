@@ -15,6 +15,13 @@ import Orb from '@/components/Orb'
 export default function Page() {
   return (
     <>
+    <div className="bg-white mx-auto p-0 dark:bg-gray-900 w-full">
+        <div className="grid grid-cols-2 md:grid-cols-8 gap-4 w-full">
+          <div className='bg-blue-500 order-2 md:order-1 md:col-span-2' >title</div>
+          <div className='bg-blue-500 order-1 md:order-1 col-span-2 md:col-span-4'>menu</div>
+          <div className='bg-blue-500 order-3 md:order-1 md:col-span-2'>icons</div>
+        </div>
+    </div>
     <div className="bg-white mx-auto p-0 dark:bg-gray-900 w-[95vw] mb-10">
       <div className="grid grid-cols-1 md:grid-cols-6 gap-4 w-full">
         <div className='md:col-span-3 h-[90vh] md:h-[60vh] w-full'>

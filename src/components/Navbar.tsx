@@ -13,6 +13,7 @@ const Navbar: React.FC = () => {
   console.log(pathname);
   return (
     <nav className="absolute top-0  left-0 w-full px-6 border-none flex items-center justify-between bg-transparent border-b border-white/20 text-white">
+      
       {/* Left: Logo */}
       <Link
         href="/"
@@ -33,38 +34,14 @@ const Navbar: React.FC = () => {
       </Link>
 
       {/* Center: Navigation Links */}
-      <div className="pt-0 mt-0" >
-        <GooeyNav 
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Project", href: "/project" },
-            { label: "Blogs", href: "/blog" },
-            { label: "Stack", href: "#" },
-            { label: "Contact", href: "/contact" }
-          ]}
-          initialActiveIndex={0}
-          // 🌈 Easy particle colors - just pass the colors you want!
-          particleColors={[
-            "#ff6b6b", // Red
-            "#4ecdc4", // Teal
-            "#45b7d1", // Blue
-            "#96ceb4", // Green
-            "#ffeaa7", // Yellow
-            "#dda0dd", // Purple
-          ]}
-          
-          
-          backgroundColor="black"  // Dark blue background
-          textColor="white"        // Light gray text
-          activeTextColor="black"  // Dark text when active
-        />
-      </div>
+      
 
       <Avatar className="h-12 w-12">
           <AvatarImage src="https://github.com/tvnmvy66.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
     </nav>
+
   );
 };
 

@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white dark:bg-black text-gray-900 dark:text-white">
-        <div className=''>
+        <div className='hidden'>
           <Aurora
             colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
             blend={0.5}
