@@ -375,7 +375,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
           }
         `}
       </style>
-      <div className="gooey-nav-container rounded-[2px] pt-0 mt-0" ref={containerRef}>
+      <div className="fixed gooey-nav-container rounded-[2px] pt-0 mt-0" ref={containerRef}>
         <nav className="gooey-nav pt-0 mt-0">
           <ul ref={navRef}>
             {items.map((item, index) => (
