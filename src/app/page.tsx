@@ -34,7 +34,7 @@ export default function Page() {
             <p className='text-center text-sm md:p-8 pt-4'>🌟 Third-Year BCA Student | 💻 Intermediate MERN Developer | 🎨 Proficient in HTML & CSS | 🚀 Passionate about building sleek, responsive web applications | 📚</p>
           </div>
           </motion.div>
-          <img className="w-120 mx-auto md:w-160" src="https://ghchart.rshah.org/tvnmvy66" alt="GitHub Contributions Chart"></img>
+          <img className="w-120 mx-auto pt-7 md:pt-2 md:w-160" src="https://ghchart.rshah.org/tvnmvy66" alt="GitHub Contributions Chart"></img>
         </div>
         <div className='md:col-span-3 hidden md:flex h-[60vh] w-full'>
           <div className='h-114 w-114 m-auto'>
