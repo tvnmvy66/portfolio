@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/Avatar"
-import GooeyNav from '@/components/Menu'
 
 const Navbar: React.FC = () => {
   const pathname = usePathname(); // current path for active link
