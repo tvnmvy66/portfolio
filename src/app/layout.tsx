@@ -16,13 +16,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-white dark:bg-black text-gray-900 dark:text-white">
-        <div className='hidden'>
-          <Aurora
+        <div className=''>
+          <div className='absolute w-full hidden md:flex '>
+            <Aurora
             colorStops={["#3A29FF", "#FF94B4", "#FF3232"]}
             blend={0.5}
             amplitude={1.0}
             speed={0.5}
             />
+          </div>
           <Navbar/>
         </div>
         {children}

@@ -1,5 +1,5 @@
+import Link from "next/link";
 import React, { useRef, useEffect, useState } from "react";
-import Link from 'next/link'
 
 interface GooeyNavItem {
   label: string;
@@ -69,7 +69,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
     d: [number, number],
     r: number
   ) => {
-    const rotate = noise(r / 10);
+    let rotate = noise(r / 10);
     return {
       start: getXY(d[0], particleCount - i, particleCount),
       end: getXY(d[1] + noise(7), particleCount - i, particleCount),
@@ -203,7 +203,8 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
             position: relative;
             background: ${backgroundColor};
             padding: 1rem;
-            border-radius: 0px 0px 2rem 2rem;
+            border-radius: 0rem 0rem 2rem 2rem;
+            width:100%;
           }
           .effect {
             position: absolute;
@@ -330,12 +331,15 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
           }
           .gooey-nav ul {
             display: flex;
-            gap: 2rem;
+            gap: clamp(1rem);
             list-style: none;
             padding: 0;
             margin: 0;
             position: relative;
             z-index: 3;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
           }
           .gooey-nav li {
             padding: 0.6em 1em;
@@ -344,7 +348,9 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
             cursor: pointer;
             transition: all 0.3s ease;
             color: ${textColor};
+            flex-shrink: 0;
             text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+            min-width: max-content;
           }
           .gooey-nav li:hover {
             color: rgba(255,255,255,0.8);
@@ -372,11 +378,13 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
             text-decoration: none;
             color: inherit;
             outline: none;
+            width: 100%;
+            height: 100%;
           }
         `}
       </style>
-      <div className="fixed gooey-nav-container rounded-[2px] pt-0 mt-0" ref={containerRef}>
-        <nav className="gooey-nav pt-0 mt-0">
+      <div className="gooey-nav-container" ref={containerRef}>
+        <nav className="gooey-nav">
           <ul ref={navRef}>
             {items.map((item, index) => (
               <li

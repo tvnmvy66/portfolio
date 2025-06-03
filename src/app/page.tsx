@@ -15,15 +15,8 @@ import Orb from '@/components/Orb'
 export default function Page() {
   return (
     <>
-    <div className="bg-white mx-auto p-0 dark:bg-gray-900 w-full">
-        <div className="grid grid-cols-2 md:grid-cols-8 gap-4 w-full">
-          <div className='bg-blue-500 order-2 md:order-1 md:col-span-2' >title</div>
-          <div className='bg-blue-500 order-1 md:order-1 col-span-2 md:col-span-4'>menu</div>
-          <div className='bg-blue-500 order-3 md:order-1 md:col-span-2'>icons</div>
-        </div>
-    </div>
     <div className="bg-white mx-auto p-0 dark:bg-gray-900 w-[95vw] mb-10">
-      <div className="grid grid-cols-1 md:grid-cols-6 gap-4 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-5 w-full">
         <div className='md:col-span-3 h-[90vh] md:h-[60vh] w-full'>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -41,10 +34,10 @@ export default function Page() {
             <p className='text-center text-sm md:p-8 pt-4'>🌟 Third-Year BCA Student | 💻 Intermediate MERN Developer | 🎨 Proficient in HTML & CSS | 🚀 Passionate about building sleek, responsive web applications | 📚</p>
           </div>
           </motion.div>
-          <img className="w-120 mx-auto md:w-180" src="https://ghchart.rshah.org/tvnmvy66" alt="GitHub Contributions Chart"></img>
+          <img className="w-120 mx-auto md:w-160" src="https://ghchart.rshah.org/tvnmvy66" alt="GitHub Contributions Chart"></img>
         </div>
         <div className='md:col-span-3 hidden md:flex h-[60vh] w-full'>
-          <div className='h-130 w-130 m-auto'>
+          <div className='h-114 w-114 m-auto'>
             <Orb
               hoverIntensity={0.5}  
               rotateOnHover={true}
