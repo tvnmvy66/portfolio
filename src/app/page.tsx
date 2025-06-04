@@ -24,14 +24,20 @@ export default function Page() {
             transition={{ duration: 2 }}
             className="flex flex-col md:flex-row m-auto mt-10 h-[60vh] md:h-[35vh] max-w-[90vw]"
             >
-            <Avatar className=" mx-auto mt-5 h-60 w-60 md:h-50 md:w-50">
-              <AvatarImage src="https://github.com/tvnmvy66.png" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              aria-label="User menu"
+              className='h-60 w-60 mx-auto md:h-50 md:w-50 mt-5 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-900 transition duration-150'
+              >
+              <Avatar className="h-60 w-60 md:h-50 md:w-50">
+                <AvatarImage src="https://github.com/tvnmvy66.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+            </motion.button>
           <div className='mx-auto mt-5'>
             <p className='text-4xl text-center md:text-5xl'>Tanmay Dongare</p>
             <p className='text-md text-center md:text-xl pt-2'>FullStack Dev | Gen AI</p>
-            <p className='text-center text-sm md:p-8 pt-4'>🌟 Third-Year BCA Student | 💻 Intermediate MERN Developer | 🎨 Proficient in HTML & CSS | 🚀 Passionate about building sleek, responsive web applications | 📚</p>
+            <p className='text-center text-sm md:p-8 pt-4'>🌟 Third-Year BCA Student | 💻 Aspiring MERN Developer | 🎨 Expert in HTML & CSS | 🚀 Dedicated to crafting striking, responsive web applications</p>
           </div>
           </motion.div>
           <img className="w-120 mx-auto pt-7 md:pt-2 md:w-160" src="https://ghchart.rshah.org/tvnmvy66" alt="GitHub Contributions Chart"></img>
@@ -49,33 +55,33 @@ export default function Page() {
         <div className='md:col-span-2 w-full'>
           <Card className="w-full md:h-[28vh]">
           <CardHeader>
-          <CardTitle>FullStack Developer</CardTitle>
+          <CardTitle className='text-xl md:text-2xl'>FullStack Developer</CardTitle>
           <CardDescription>HTML, CSS, JavaScript, React, NextJs</CardDescription>
           </CardHeader>
           <CardContent>
-          Hello! I&apos;m Tanmay Dongare, a full-stack developer proficient in HTML, CSS, JavaScript, and React for frontend, and experienced in backend development using Node.js, Next.js, and Python (FastAPI).
+           I specialize in building seamless user experiences with a strong foundation in HTML, CSS, JavaScript, and React. My backend expertise includes leveraging Node.js, Next.js, and Python (FastAPI) to create robust server-side applications.
           </CardContent>
           </Card>
         </div>
         <div className='md:col-span-2 w-full'>
           <Card className="w-full md:h-[28vh]">
           <CardHeader>
-          <CardTitle>Generative AI</CardTitle>
+          <CardTitle className='text-xl md:text-2xl'>Generative AI</CardTitle>
           <CardDescription>Python, JavaScript</CardDescription>
           </CardHeader>
           <CardContent>
-            I work with databases such as MongoDB and PostgreSQL, and have a passion for GenAI, leveraging tools like QdrantDB (for vector storage) and Neo4j (for knowledge graphs) with frameworks such as LangChain, LangGraph, and Langfuse.
+            My passion for AI drives me to explore innovative solutions using Python and JavaScript. I have extensive experience in utilizing cutting-edge tools like QdrantDB (for vector storage) and Neo4j (for knowledge graphs), complemented by frameworks like LangChain, LangGraph, and Langfuse.
           </CardContent>
           </Card>
         </div>
         <div className='md:col-span-2 w-full'>
           <Card className="w-full md:h-[28vh]">
           <CardHeader>
-          <CardTitle>Tools</CardTitle>
+          <CardTitle className='text-xl md:text-2xl'>Development Tools</CardTitle>
           <CardDescription>Docker,redis,Kafka</CardDescription>
           </CardHeader>
           <CardContent>
-            I work with databases such as MongoDB and PostgreSQL, and have a passion for GenAI, leveraging tools like QdrantDB (for vector storage) and Neo4j (for knowledge graphs) with frameworks such as LangChain, LangGraph, and Langfuse.
+            Proficient in Docker for streamlined containerization and CI/CD, Redis for low-latency caching, and Kafka for building scalable, event-driven systems.Experienced in integrating these tools to boost performance, reliability, and real-time processing in microservice architectures.
           </CardContent>
           </Card></div>
       </div>

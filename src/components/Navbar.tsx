@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
             <div className='flex justify-left pl-5'>
               <Link
                 href="/"
-                className="flex justify-center gap-1 text-4xl font-bold text-white dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-150"
+                className="flex justify-center gap-1 text-4xl font-bold text-black md:text-white dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors duration-150"
                 aria-label="Home"
               >
                 <motion.button
