@@ -16,10 +16,6 @@ type Repo = {
   description: string | null;
 };
 
-type GitHubReposProps = {
-  username: string;
-};
-
 export default function Page() {
 
   const [repos, setRepos] = useState<Repo[]>([]);
