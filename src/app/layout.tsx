@@ -5,8 +5,9 @@ import Aurora from '@/components/Aurora';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Tanmay - Portfolio',
-  description: 'A portfolio website',
+  title: 'Tanmay Dongare',
+  description: 'A software developer portfolio website of Tanmay Dongare ',
+  // icons:'/logo.svg'
 };
 
 export default function RootLayout({

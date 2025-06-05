@@ -44,7 +44,8 @@ export default function Page() {
 
   return (
     <>
-    <div className='grid grid-cols-3 gap-6 text-center w-[90vw] mx-auto mt-14 md:mt-10 mb-10 '>
+    <div className="text-4xl mt-14 md:mt-10 flex justify-center font-bold">Projects</div>
+    <div className='grid grid-cols-3 gap-6 text-center w-[90vw] mt-10 md:mt-10 mx-auto mb-10 '>
       {repos.map((repo) => (
       <div key={repo.name} className='col-span-3 md:col-span-1 h-40 w-full '>
         <Link href={repo.html_url}>
