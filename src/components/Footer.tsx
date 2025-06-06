@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
                     <div className="col-span-4 h-10">
                         <div className='flex justify-center items-center'>
                             <Avatar className="h-10 w-10 md:h-9 md:w-9">
-                                <AvatarImage src="https://github.com/tvnmvy66.png" />
+                                <AvatarImage src="https://github.com/tvnmvy66.png"  alt='profile photo'/>
                                 <AvatarFallback>CN</AvatarFallback>
                             </Avatar>
                             <p className='text-lg md:text-lg pl-2'>Tanmay Dongare</p>
@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                             Contact
                         </Link>
                     </div>
-                    <div className="col-span-4 h-15 flex justify-center items-center list-none gap-4">
+                        <ul className='col-span-4 h-15 flex justify-center items-center list-none gap-4'>
                         <li><Link href="https://x.com/tvnmvy_"><Image
                             src="./twitter.svg"     // For public folder images
                             alt="github icon - redirects to tanmays github page"       // Always add alt for accessibility & SEO
@@ -64,8 +64,7 @@ const Footer: React.FC = () => {
                             alt="github icon - redirects to tanmays github page"       // Always add alt for accessibility & SEO
                             width={20}             // Required
                             height={20}             // Optional: loads image ASAP
-                        /></Link></li>
-                    </div>
+                        /></Link></li></ul>
                 </div>
             </div>
         </>

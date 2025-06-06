@@ -27,12 +27,12 @@ export default function Page() {
     <>
     <div className="bg-white mx-auto p-0 dark:bg-gray-900 w-[95vw] mb-10">
       <div className="grid grid-cols-1 md:grid-cols-6 gap-5 w-full">
-        <div className='md:col-span-3 h-[90vh] md:h-[60vh] w-full'>
+        <div className='flex flex-col gap-7 md:gap-0 md:col-span-3  w-full'>
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 2 }}
-            className="flex flex-col md:flex-row m-auto mt-10 h-[60vh] md:h-[35vh] max-w-[90vw]"
+            className="flex flex-col md:flex-row m-auto mt-10  max-w-[90vw]"
             >
             <motion.button
               whileHover={{ scale: 1.1 }}
@@ -40,7 +40,7 @@ export default function Page() {
               className='h-60 w-60 mx-auto md:h-50 md:w-50 mt-5 rounded-full bg-gray-300 dark:bg-gray-600 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-900 transition duration-150'
               >
               <Avatar className="h-60 w-60 md:h-50 md:w-50">
-                <AvatarImage src="https://github.com/tvnmvy66.png" />
+                <AvatarImage src="https://github.com/tvnmvy66.png" alt='profile photo'/>
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
             </motion.button>
@@ -53,7 +53,7 @@ export default function Page() {
                   <Button className='px-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-900 transition duration-150'>Try Jarvis 
                   <Image
                       src="./arrow.svg"     // For public folder images
-                      alt="downlod icon - redirects to tanmays resume"       // Always add alt for accessibility & SEO
+                      alt="redirect icon - redirects to jarvis project"       // Always add alt for accessibility & SEO
                       width={17}             // Required
                       height={17}             // Optional: loads image ASAP
                   />
@@ -62,7 +62,7 @@ export default function Page() {
               <Button onClick={handleDownload} className='px-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-900 transition duration-150'>Download Resume 
                 <Image
                     src="./arrow.svg"     // For public folder images
-                    alt="downlod icon - redirects to tanmays resume"       // Always add alt for accessibility & SEO
+                    alt="download icon - redirects to tanmays resume"       // Always add alt for accessibility & SEO
                     width={17}             // Required
                     height={17}             // Optional: loads image ASAP
                 />
@@ -70,7 +70,13 @@ export default function Page() {
             </div>
           </div>
           </motion.div>
-          <img className="w-120 mx-auto mt-16 md:mt-2 md:w-160" src="https://ghchart.rshah.org/tvnmvy66" alt="GitHub Contributions Chart"></img>
+          <Image
+            src="https://ghchart.rshah.org/tvnmvy66.svg"
+            alt="GitHub Contributions Chart"
+            width={800}  // Adjust to actual image dimensions
+            height={200} // Adjust to actual image dimensions
+            className=""
+          />
         </div>
         <div className='md:col-span-3 hidden md:flex  w-full'>
           <div className='h-114 w-114 mx-auto'>

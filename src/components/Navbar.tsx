@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
                   aria-label="User menu"
                 >
                   <Avatar className="h-12 w-12">
-                  <AvatarImage src="https://github.com/shadcn.png" />
+                  <AvatarImage src="https://github.com/shadcn.png"  alt='profile photo'/>
                   <AvatarFallback>CN</AvatarFallback>
                 </Avatar>
                 </motion.button>
@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
           <div className='md:pt-4 order-3 md:order-1 md:col-span-2'>
             <div className='flex justify-end pr-5'>
               <Avatar className="h-12 w-12 md:h-14 md:w-14">
-                <AvatarImage src="https://github.com/tvnmvy66.png" />
+                <AvatarImage src="https://github.com/tvnmvy66.png"  alt='profile photo'/>
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
             </div>
