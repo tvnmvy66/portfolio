@@ -21,7 +21,7 @@ const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
-  <div
+  <h2
     ref={ref}
     className={cn("flex flex-col text-center p-6", className)}
     {...props}

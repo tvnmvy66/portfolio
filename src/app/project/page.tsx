@@ -39,8 +39,11 @@ export default function Page() {
     fetchRepos();
   }, []);
 
-  if (loading) return <p>Loading Projects</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (loading) 
+  return <div><h1 className="text-4xl mt-14 md:mt-10 flex justify-center font-bold">Contact</h1>
+        <p className="text-sm mt-5 md:mt-10 flex justify-center font-bold">Fetching from Github</p></div>;
+  if (error) return <div><h1 className="text-4xl mt-14 md:mt-10 flex justify-center font-bold">Contact</h1>
+        <p className="text-sm mt-5 md:mt-10 flex justify-center font-bold">Error: {error}</p></div>;
 
   return (
     <>
@@ -52,7 +55,6 @@ export default function Page() {
         <Card className="w-full h-full">
           <CardHeader>
           <CardTitle className='text-xl md:text-2xl'>{repo.name}</CardTitle>
-          {/* <CardDescription>HTML, CSS, JavaScript, React, NextJs</CardDescription> */}
           </CardHeader>
           <CardContent>
             {repo.description}

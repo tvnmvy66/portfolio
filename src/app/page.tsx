@@ -9,10 +9,20 @@ import {
   CardTitle,
 } from "@/components/Card"
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/Avatar'
-// import { TypeAnimation } from 'react-type-animation';
 import Orb from '@/components/Orb'
+import { Button } from "@/components/Button"
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Page() {
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '/favicon.ico';
+    link.download = 'favicon.ico';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <>
     <div className="bg-white mx-auto p-0 dark:bg-gray-900 w-[95vw] mb-10">
@@ -38,12 +48,32 @@ export default function Page() {
             <p className='text-4xl text-center md:text-5xl'>Tanmay Dongare</p>
             <p className='text-md text-center md:text-xl pt-2'>FullStack Dev | Gen AI</p>
             <p className='text-center text-sm md:p-8 pt-4'>🌟 Third-Year BCA Student | 💻 Aspiring MERN Developer | 🎨 Expert in HTML & CSS | 🚀 Dedicated to crafting striking, responsive web applications</p>
+            <div className='flex justify-center gap-7 md:gap-14 mt-5 md:mt-0'>
+              <Link href="/jarvis">
+                  <Button className='px-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-900 transition duration-150'>Try Jarvis 
+                  <Image
+                      src="./arrow.svg"     // For public folder images
+                      alt="downlod icon - redirects to tanmays resume"       // Always add alt for accessibility & SEO
+                      width={17}             // Required
+                      height={17}             // Optional: loads image ASAP
+                  />
+                </Button>
+              </Link>
+              <Button onClick={handleDownload} className='px-4 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-100 dark:focus:ring-offset-gray-900 transition duration-150'>Download Resume 
+                <Image
+                    src="./arrow.svg"     // For public folder images
+                    alt="downlod icon - redirects to tanmays resume"       // Always add alt for accessibility & SEO
+                    width={17}             // Required
+                    height={17}             // Optional: loads image ASAP
+                />
+              </Button>
+            </div>
           </div>
           </motion.div>
-          <img className="w-120 mx-auto pt-7 md:pt-2 md:w-160" src="https://ghchart.rshah.org/tvnmvy66" alt="GitHub Contributions Chart"></img>
+          <img className="w-120 mx-auto mt-16 md:mt-2 md:w-160" src="https://ghchart.rshah.org/tvnmvy66" alt="GitHub Contributions Chart"></img>
         </div>
-        <div className='md:col-span-3 hidden md:flex h-[60vh] w-full'>
-          <div className='h-114 w-114 m-auto'>
+        <div className='md:col-span-3 hidden md:flex  w-full'>
+          <div className='h-114 w-114 mx-auto'>
             <Orb
               hoverIntensity={0.5}  
               rotateOnHover={true}
@@ -78,7 +108,7 @@ export default function Page() {
           <Card className="w-full md:h-[28vh]">
           <CardHeader>
           <CardTitle className='text-xl md:text-2xl'>Development Tools</CardTitle>
-          <CardDescription>Docker,redis,Kafka</CardDescription>
+          <CardDescription>Docker, Redis, Kafka</CardDescription>
           </CardHeader>
           <CardContent>
             Proficient in Docker for streamlined containerization and CI/CD, Redis for low-latency caching, and Kafka for building scalable, event-driven systems.Experienced in integrating these tools to boost performance, reliability, and real-time processing in microservice architectures.
@@ -89,26 +119,3 @@ export default function Page() {
     </>
   );
 }
-{/* <Card className="mt-10 p-auto w-130">
-          <CardHeader>
-          <div className="w-40 h-40 mb-5 bg-gray-300 m-auto dark:bg-gray-600 rounded-full" />
-          <CardTitle>Tanmay Dongare</CardTitle>
-          <CardDescription>Full Stack Developer | AI Enthusiast</CardDescription>
-          </CardHeader>
-          <CardContent>
-          Hello! I&apos;m Tanmay Dongare, a full-stack developer proficient in HTML, CSS, JavaScript, and React for frontend, and experienced in backend development using Node.js, Next.js, and Python (FastAPI). I work with databases such as MongoDB and PostgreSQL, and have a passion for GenAI, leveraging tools like QdrantDB (for vector storage) and Neo4j (for knowledge graphs) with frameworks such as LangChain, LangGraph, and Langfuse.
-          </CardContent>
-          </Card> 
-          
-          
-          <div className='w-150 pl-10 pt-10 '>
-        <TypeAnimation
-          style={{ whiteSpace: 'pre-line', height: '195px', display: 'block' }}
-          sequence={[
-            `Hello! I&apos;m Tanmay Dongare, a full-stack developer proficient in HTML, CSS, JavaScript, and React for frontend, and experienced in backend development using Node.js, Next.js, and Python (FastAPI). I work with databases such as MongoDB and PostgreSQL, and have a passion for GenAI, leveraging tools like QdrantDB (for vector storage) and Neo4j (for knowledge graphs) with frameworks such as LangChain, LangGraph, and Langfuse.`, // actual line-break inside string literal also gets animated in new line, but ensure there are no leading spaces
-            1000,
-            '',
-          ]}
-          repeat={Infinity}
-        />
-      </div>*/}

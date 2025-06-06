@@ -47,19 +47,19 @@ const Footer: React.FC = () => {
                             width={20}             // Required
                             height={20}             // Optional: loads image ASAP
                         /></Link></li>
-                        <li><Link href="gmail.com"><Image
+                        <li><Link href="mailto:tanmay9987@gmail.com?subject=Hello%20Tanmay&body=I%20want%20to%20connect%20with%20you!"><Image
                             src="./mail.svg"     // For public folder images
                             alt="github icon - redirects to tanmays github page"       // Always add alt for accessibility & SEO
                             width={20}             // Required
                             height={20}             // Optional: loads image ASAP
                         /></Link></li>
-                        <li><Link href="linkedin.com"><Image
+                        <li><Link href="https://www.linkedin.com/in/tanmay-dongare"><Image
                             src="./linkedin.svg"     // For public folder images
                             alt="github icon - redirects to tanmays github page"       // Always add alt for accessibility & SEO
                             width={20}             // Required
                             height={20}             // Optional: loads image ASAP
                         /></Link></li>
-                        <li><Link href="http://github.com/tvnmvy66"><Image
+                        <li><Link href="https://github.com/tvnmvy66"><Image
                             src="./github.svg"     // For public folder images
                             alt="github icon - redirects to tanmays github page"       // Always add alt for accessibility & SEO
                             width={20}             // Required
