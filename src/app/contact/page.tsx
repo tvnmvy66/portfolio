@@ -19,7 +19,7 @@ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     };
 
     try {
-      const res = await fetch("http://localhost:8000/contact", {
+      const res = await fetch("https://jarvis-p6to.onrender.com/contact", {
         method: "POST",
         mode: "cors", // Make CORS intention clear
         headers: {
